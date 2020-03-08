@@ -4,17 +4,19 @@ import { CommonModule } from '@angular/common';
 import { FilterRoutingModule } from './filter-routing.module';
 import { SortFilterComponent } from './sort-filter/sort-filter.component';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
+import { CheckboxFilterComponent } from './checkbox-filter/checkbox-filter.component';
 
 
 @NgModule({
-  declarations: [SortFilterComponent, SearchFilterComponent],
+  declarations: [SortFilterComponent, SearchFilterComponent, CheckboxFilterComponent],
   imports: [
     CommonModule,
     FilterRoutingModule
   ],
   exports: [
     SortFilterComponent,
-    SearchFilterComponent
+    SearchFilterComponent,
+    CheckboxFilterComponent
   ]
 })
 export class FilterModule { }

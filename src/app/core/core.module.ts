@@ -1,3 +1,5 @@
+import { FilterModule } from './../filter/filter.module';
+import { CardListModule } from './../card-list/card-list.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +11,9 @@ import { LayoutComponent } from './layout/layout.component';
   declarations: [LayoutComponent],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    CardListModule,
+    FilterModule
   ],
   exports: [
     LayoutComponent
