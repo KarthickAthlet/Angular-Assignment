@@ -11,6 +11,10 @@ import { SearchFilterComponent } from './search-filter/search-filter.component';
   imports: [
     CommonModule,
     FilterRoutingModule
+  ],
+  exports: [
+    SortFilterComponent,
+    SearchFilterComponent
   ]
 })
 export class FilterModule { }
