@@ -27,7 +27,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="col-md-4 float-left">
-                  <app-search-filter></app-search-filter>
+                  <app-search-filter (searchKeyEmit)="onGetSearchKey($event)"></app-search-filter>
                 </div>
                 <div class="col-md-2 float-right">
                   <app-sort-filter></app-sort-filter>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="row">
-          <app-cards></app-cards>
+          <app-cards [searchKeyword]="searchKey"></app-cards>
         </div>
       </div>
     </div>

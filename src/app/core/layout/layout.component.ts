@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-
+  searchKey: any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onGetSearchKey(event) {
+    console.log(event);
+    this.searchKey = event;
   }
 
 }

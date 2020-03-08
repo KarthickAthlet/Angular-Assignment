@@ -3,16 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { CardListRoutingModule } from './card-list-routing.module';
 import { CardsComponent } from './cards/cards.component';
+import { SortPipe } from '../pipes/sort.pipe';
+import { SearchPipe } from '../pipes/search.pipe';
 
 
 @NgModule({
-  declarations: [CardsComponent],
+  declarations: [CardsComponent,
+    SortPipe,
+    SearchPipe],
   imports: [
     CommonModule,
     CardListRoutingModule
   ],
   exports: [
-    CardsComponent
+    CardsComponent,
+    SortPipe,
+    SearchPipe
   ]
 })
 export class CardListModule { }
