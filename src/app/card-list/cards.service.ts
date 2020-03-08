@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap, catchError } from 'rxjs/Operators';
+import { tap, catchError, map } from 'rxjs/Operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,8 @@ export class CardsService {
   constructor(private http: HttpClient) { }
 
   getCardList(): Observable<any> {
-    return this.http.get<any>(this.API_URL).pipe(tap(data => console.log(data)),
+    return this.http.get<any>(this.API_URL).pipe(map(data => data?.results),
+      tap(data => console.log(data)),
       catchError(this.handleError));
   }
 

@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
+  cardDetails: any;
+
   constructor(private cardService: CardsService) { }
 
   ngOnInit(): void {
-    this.cardService.getCardList().subscribe();
+    this.cardService.getCardList().subscribe(data => this.cardDetails = data);
   }
 
 }
