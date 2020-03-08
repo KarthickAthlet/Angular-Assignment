@@ -18,6 +18,12 @@ export class CardsService {
       catchError(this.handleError));
   }
 
+  getFilterSet(filterBy): Observable<any> {
+    return this.http.get<any>(this.API_URL).pipe(map(data => data?.results),
+      tap(data => console.log(data)),
+      catchError(this.handleError));
+  }
+
   private handleError(err: HttpErrorResponse) {
     let errorMessage: string;
     if (err.error instanceof Error) {

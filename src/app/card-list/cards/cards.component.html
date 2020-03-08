@@ -1,8 +1,8 @@
 <div class="cards-container">
   <!-- {{cardDetails?.results | json}} -->
-  <div class="row" *ngFor="let cardDetail of cardDetails">
+  <div class="row">
     <!-- iteration needs to be implemented starts -->
-    <div class="card col-md-3" style="margin-top: 10px;padding: 0px;">
+    <div class="card col-md-3" style="margin-top: 10px;padding: 0px;" *ngFor="let cardDetail of cardDetails">
       <img class="card-img-top" src="{{cardDetail?.image}}" alt="Card image cap" loading="lazy">
       <div class="card-body" style="padding: 10px 20px;">
         <h5 class="card-title">{{cardDetail?.name}}</h5>
@@ -10,7 +10,7 @@
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><span>STATUS</span> <span class="float-right">{{cardDetail?.status}}</span></li>
-        <li class="list-group-item"><span>SPECIES</span> <span class="float-right">{{cardDetails?.species}}</span></li>
+        <li class="list-group-item"><span>SPECIES</span> <span class="float-right">{{cardDetail?.species}}</span></li>
         <li class="list-group-item"><span>GENDER</span> <span class="float-right">{{cardDetail?.gender}}</span></li>
         <li class="list-group-item"><span>ORIGIN</span> <span class="float-right">{{cardDetail?.origin?.name}}</span>
         </li>
