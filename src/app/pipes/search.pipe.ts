@@ -7,7 +7,7 @@ export class SearchPipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
     console.log('pipeValue', value);
-    const searchKey = args[0].toLowerCase();
+    const searchKey = args[0]?.toLowerCase();
     const newArray = value?.filter((val: any) => {
       const key = val?.name?.toLowerCase();
       return key.includes(searchKey);

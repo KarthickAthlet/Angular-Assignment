@@ -1,2 +1,3 @@
 <label>Search by name:</label>
-<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" #searchKey
+  [ngModel]="searchKey" (ngModelChange)="sendSearchKey(searchKey)">
