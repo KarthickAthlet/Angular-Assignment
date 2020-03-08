@@ -2,7 +2,8 @@
   <!-- {{cardDetails?.results | json}} -->
   <div class="row">
     <!-- iteration needs to be implemented starts -->
-    <div class="card col-md-3" style="margin-top: 10px;padding: 0px;" *ngFor="let cardDetail of cardDetails">
+    <div class="card col-md-3" style="margin-top: 10px;padding: 0px;"
+      *ngFor="let cardDetail of cardDetails | search:searchKeyword">
       <img class="card-img-top" src="{{cardDetail?.image}}" alt="Card image cap" loading="lazy">
       <div class="card-body" style="padding: 10px 20px;">
         <h5 class="card-title">{{cardDetail?.name}}</h5>

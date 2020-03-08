@@ -7,14 +7,10 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CardListModule } from './card-list/card-list.module';
 import { FilterModule } from './filter/filter.module';
-import { SortPipe } from './pipes/sort.pipe';
-import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SortPipe,
-    SearchPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
