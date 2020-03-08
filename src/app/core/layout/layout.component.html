@@ -1,6 +1,47 @@
-<p>layout works!</p>
+<!-- visible only on mobile start-->
+<div class="row d-block d-sm-none">
+  <div class="col-md-12">
+    <div class="cards-container">
+      <app-checkbox-filter></app-checkbox-filter>
+      <app-search-filter></app-search-filter>
+      <app-sort-filter></app-sort-filter>
+      <app-cards></app-cards>
+    </div>
+  </div>
+</div>
+<!-- visible only on mobile ends  -->
 
-<app-checkbox-filter></app-checkbox-filter>
-<app-search-filter></app-search-filter>
-<app-sort-filter></app-sort-filter>
-<app-cards></app-cards>
+
+<!-- visble on desktop start  -->
+<div class="container-fluid">
+  <div class="row d-none d-sm-block">
+    <div class="col-md-2 float-left">
+      <div class="card card-body" style="padding: 0px; border: 0px;">
+        <app-checkbox-filter></app-checkbox-filter>
+      </div>
+    </div>
+    <div class="col-md-10 float-right">
+      <div class="cards-container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-4 float-left">
+                  <app-search-filter></app-search-filter>
+                </div>
+                <div class="col-md-2 float-right">
+                  <app-sort-filter></app-sort-filter>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <app-cards></app-cards>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- visble on desktop ends  -->
