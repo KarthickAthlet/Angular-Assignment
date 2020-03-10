@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CardListModule } from './card-list/card-list.module';
 import { FilterModule } from './filter/filter.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FilterModule } from './filter/filter.module';
     AppRoutingModule,
     CoreModule,
     FilterModule,
-    CardListModule
+    CardListModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
