@@ -1,24 +1,21 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CardListRoutingModule } from './card-list-routing.module';
+import { SharedModule } from './../shared/shared.module';
 import { CardsComponent } from './cards/cards.component';
-import { SortPipe } from '../pipes/sort.pipe';
-import { SearchPipe } from '../pipes/search.pipe';
 
 
 @NgModule({
-  declarations: [CardsComponent,
-    SortPipe,
-    SearchPipe],
+  declarations: [CardsComponent],
   imports: [
     CommonModule,
+    SharedModule,
     CardListRoutingModule
   ],
   exports: [
-    CardsComponent,
-    SortPipe,
-    SearchPipe
+    CardsComponent
   ]
 })
 export class CardListModule { }
