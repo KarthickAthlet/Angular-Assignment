@@ -30,14 +30,14 @@
                   <app-search-filter (searchKeyEmit)="onGetSearchKey($event)"></app-search-filter>
                 </div>
                 <div class="col-md-2 float-right">
-                  <app-sort-filter></app-sort-filter>
+                  <app-sort-filter (sortOrderValue)="sortFilterValue($event)"></app-sort-filter>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <app-cards [searchKeyword]="searchKey"></app-cards>
+          <app-cards [searchKeyword]="searchKey" [sortKeyword]="sortKey"></app-cards>
         </div>
       </div>
     </div>

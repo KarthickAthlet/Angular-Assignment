@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardsComponent implements OnInit {
 
   @Input() searchKeyword = '';
-
+  @Input() sortKeyword = 'ascending';
   cardDetails: any;
 
   constructor(private cardService: CardsService) { }
