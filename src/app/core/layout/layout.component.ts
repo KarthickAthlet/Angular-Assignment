@@ -7,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
   searchKey: any;
+  sortKey: any;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onGetSearchKey(event) {
-    console.log(event);
-    this.searchKey = event;
+  onGetSearchKey(value) {
+    // console.log(event);
+    this.searchKey = value;
   }
 
+  sortFilterValue(value) {
+    this.sortKey = value;
+  }
 }
