@@ -3,9 +3,9 @@
   <div class="col-md-12">
     <div class="cards-container">
       <app-checkbox-filter></app-checkbox-filter>
-      <app-search-filter></app-search-filter>
-      <app-sort-filter></app-sort-filter>
-      <app-cards></app-cards>
+      <app-search-filter (searchKeyEmit)="onGetSearchKey($event)"></app-search-filter>
+      <app-sort-filter (sortOrderValue)="sortFilterValue($event)"></app-sort-filter>
+      <app-cards [searchKeyword]="searchKey" [sortKeyword]="sortKey"></app-cards>
     </div>
   </div>
 </div>
