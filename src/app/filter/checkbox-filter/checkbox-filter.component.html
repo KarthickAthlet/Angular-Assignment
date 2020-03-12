@@ -1,4 +1,4 @@
-<div class="card" style="margin: 15px 0px;" *ngFor="let fs of filterStructure">
+<div class="card card-wrapper" *ngFor="let fs of filterStructure">
   <div class="card-body">
     <h5 class="card-title">{{fs.menu}}</h5>
     <app-checkbox [subMenu]="fs.subMenu"></app-checkbox>

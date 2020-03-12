@@ -1,0 +1,8 @@
+.card-tiles {
+  margin-top: 10px;
+  padding: 0px;
+}
+
+.card-tiles .card-body {
+  padding: 10px 20px;
+}
