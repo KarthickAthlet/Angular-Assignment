@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "Angular-Assignment"
+  "defaultProject": "Angular-Assignment",
+  "cli": {
+    "analytics": false
+  }
 }
